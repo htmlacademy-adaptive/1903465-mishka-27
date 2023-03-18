@@ -25,7 +25,7 @@
           </ul>
           <ul class="header__user-nav">
             <li class="header__user-nav-item">
-              <a class="header__user-nav-link" href="#">Поиск по сайту</a>
+              <a class="header__user-nav-link" href="#" aria-label="Поиск по сайту.">Поиск по сайту</a>
             </li>
             <li class="header__user-nav-item">
               <a class="header__user-nav-link" href="#">Корзина: пока пуста</a>
@@ -156,8 +156,32 @@
       <div class="modal">
         <h2 class="modal__title">Добавить в корзину</h2>
         <p class="modal__text">Выберите размер:</p>
-
-        <button class="modal__button" type="submit">Добавить</button>
+        <form class="modal__form" action="https://echo.htmlacademy.ru">
+          <ul class="modal__form-list">
+            <li class="modal__form-item">
+              <label class="modal__form-label">
+                <input class="modal__form-input visually-hidden" type="radio" name="size" value="s" checked>
+                <span class="modal__form-mark"></span>
+                <span class="modal__form-text">s</span>
+              </label>
+            </li>
+            <li class="modal__form-item">
+              <label class="modal__form-label">
+                <input class="modal__form-input visually-hidden" type="radio" name="size" value="m">
+                <span class="modal__form-mark"></span>
+                <span class="modal__form-text">m</span>
+              </label>
+            </li>
+            <li class="modal__form-item">
+              <label class="modal__form-label">
+                <input class="modal__form-input visually-hidden" type="radio" name="size" value="l">
+                <span class="modal__form-mark"></span>
+                <span class="modal__form-text">l</span>
+              </label>
+            </li>
+          </ul>
+          <button class="modal__button" type="submit">Добавить</button>
+        </form>
       </div>
     </div>
 
