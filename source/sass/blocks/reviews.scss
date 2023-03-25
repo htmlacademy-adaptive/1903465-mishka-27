@@ -1,0 +1,86 @@
+.reviews__wrapper {
+  padding: 20px 0 45px 0;
+}
+
+.reviews__title {
+  margin: 0 0 14px 0;
+  font-size: 25px;
+  line-height: 30px;
+  font-weight: 700;
+}
+
+.reviews__content {
+  margin: 0;
+}
+
+.reviews__description {
+  margin: 0 0 33px 0;
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: 400;
+}
+
+.reviews__author-info {
+  margin: 0 0 30px 0;
+}
+
+.reviews__author-name {
+  margin: 0 0 5px 0;
+  font-size: 17px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+.reviews__author-email {
+  display: block;
+  font-size: 17px;
+  line-height: 30px;
+  color: $color-charcoal;
+}
+
+.reviews__pagination {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.reviews__pagination-button {
+  position: relative;
+  width: 100%;
+  min-height: 52px;
+  margin: 0 0 38px 0;
+  background-color: $color-white;
+  border: 1px solid $color-whisper;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 50px;
+    height: 26px;
+
+    background-image: url("../../img/svg/arrow-left.svg");
+    transform: translateX(-50%) translateY(-50%);
+  }
+
+  &--next::before {
+    border-left-color: transparent;
+    transform: translateX(-50%) translateY(-50%) rotate(180deg);
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.reviews__button {
+  min-height: 52px;
+  padding: 14px;
+  outline: unset;
+  border: 2px solid $color-charcoal;
+}

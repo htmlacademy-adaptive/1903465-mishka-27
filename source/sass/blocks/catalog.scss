@@ -1,0 +1,23 @@
+.catalog__title-wrapper {
+  margin: 0 0 30px 0;
+  padding: 74px 0 74px 0;
+  background-color: $color-white-smoke;
+}
+
+.catalog__title {
+  margin: 0;
+  font-size: 27px;
+  line-height: 30px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.catalog__list {
+  @include list-reset;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 30px;
+
+  margin: 0 0 30px 0;
+}

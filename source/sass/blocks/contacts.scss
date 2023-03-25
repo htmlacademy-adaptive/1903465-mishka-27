@@ -1,0 +1,96 @@
+.contacts__wrapper {
+  margin: 0 0 18px 0;
+  padding: 43px 0 32px 0;
+}
+
+.contacts__title {
+  margin: 0 0 28px 0;
+  font-size: 25px;
+  line-height: 30px;
+  font-weight: 700;
+}
+
+.contacts__address {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 30px;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 30px;
+  font-weight: 400;
+  color: $color-charcoal;
+}
+
+.contacts__block {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 33px;
+  margin: 0;
+}
+
+.contacts__email-link {
+  color: $color-charcoal;
+  text-decoration-color: $color-downy-mod;
+}
+
+.contacts__map-wrapper {
+  position: relative;
+
+  width: 100%;
+  height: 454px;
+
+  &::before {
+    content: url("../../img/svg/map-pin.svg");
+    position: absolute;
+    top: 43%;
+    left: 53%;
+    z-index: 3;
+
+    width: 67px;
+    height: 100px;
+
+    transform: translateX(-50%) translateY(-50%);
+  }
+}
+
+.contacts__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+
+  display: block;
+  width: 100%;
+
+  object-fit: cover;
+
+  @media (min-width: $vp-768) {
+    height: 457px;
+  }
+
+  @media (min-width: $vp-1150) {
+    width: 527px;
+  }
+}
+
+.contacts__iframe {
+  display: block;
+  width: 100%;
+  height: 454px;
+
+  border: none;
+
+  grid-row: 2/3;
+
+  @media (min-width: $vp-768) {
+    height: 457px;
+  }
+
+  @media (min-width: $vp-1150) {
+    width: 527px;
+  }
+}
+
+.contacts__button-wrapper {
+  padding: 59px 0 39px 0;
+}

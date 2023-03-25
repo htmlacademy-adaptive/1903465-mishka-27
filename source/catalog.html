@@ -2,159 +2,181 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Academy: Мишка</title>
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
     <div class="wrapper">
-      <header class="header">
-        <a class="header__logo" href="index.html" aria-label="Переход на главную страницу интернет-магазина.">
-          <img class="header__logo-image" src="img/svg/logo-mobile.svg" width="86" height="35" alt="Логотип сайта.">
-        </a>
-        <button class="header__nav-toggle" type="button" aria-label="Открыть/закрыть меню.">
-          <span class="header__toggle-line"></span>
-        </button>
-        <nav class="header__nav">
-          <ul class="header__site-nav">
-            <li class="header__site-nav-item">
-              <span class="header__site-nav-link header__site-nav-link--current">Каталог товаров</span>
-            </li>
-            <li class="header__site-nav-item">
-              <a class="header__site-nav-link" href="form.html">Вязание на заказ</a>
-            </li>
-          </ul>
-          <ul class="header__user-nav">
-            <li class="header__user-nav-item">
-              <a class="header__user-nav-link" href="#" aria-label="Поиск по сайту.">Поиск по сайту</a>
-            </li>
-            <li class="header__user-nav-item">
-              <a class="header__user-nav-link" href="#">Корзина: пока пуста</a>
-            </li>
-          </ul>
-          <ul class="header__sale-nav">
-            <li class="header__sale-nav-item">
-              <a class="header__sale-nav-link" href="#">Новые поступления</a>
-            </li>
-            <li class="header__sale-nav-item">
-              <a class="header__sale-nav-link" href="#">Распродажа</a>
-            </li>
-          </ul>
-        </nav>
-        <span class="header__text">Бесплатная доставка по России</span>
-      </header>
+      <div class="container">
+        <header class="header">
+          <a class="header__logo" href="index.html" aria-label="Переход на главную страницу интернет-магазина.">
+            <img class="header__logo-image" src="img/svg/logo-mobile.svg" width="86" height="35" alt="Логотип сайта.">
+          </a>
+          <button class="header__nav-toggle" type="button" aria-label="Открыть/закрыть меню.">
+            <span class="header__toggle-line"></span>
+          </button>
+          <nav class="header__nav">
+            <ul class="header__nav-list header__nav-list--site">
+              <li class="header__nav-item">
+                <span class="header__nav-link header__nav-link--current">Каталог товаров</span>
+              </li>
+              <li class="header__nav-item">
+                <a class="header__nav-link" href="form.html">Вязание на заказ</a>
+              </li>
+            </ul>
+            <ul class="header__nav-list header__nav-list--user">
+              <li class="header__nav-item header__nav-item--user">
+                <a class="header__nav-link header__nav-link--user" href="#" aria-label="Поиск по сайту.">Поиск по сайту</a>
+              </li>
+              <li class="header__nav-item header__nav-item--user">
+                <a class="header__nav-link header__nav-link--user" href="#">Корзина: пока пуста</a>
+              </li>
+            </ul>
+            <ul class="header__nav-list header__nav-list--sale">
+              <li class="header__nav-item">
+                <a class="header__nav-link" href="#">Новые поступления</a>
+              </li>
+              <li class="header__nav-item">
+                <a class="header__nav-link" href="#">Распродажа</a>
+              </li>
+            </ul>
+            <span class="header__text">Бесплатная доставка по России</span>
+          </nav>
+        </header>
+      </div>
 
       <main>
         <section class="catalog">
-          <h1 class="catalog__title">Каталог товаров</h1>
-          <ul class="catalog__list">
-            <li class="catalog__item card">
-              <a class="card__image-link" href="#">
-                <img class="card__image" src="img/catalog/catalog-bunny-mobile.jpg" width="260" height="195" alt="Вязаная игрушка в виде зайца.">
-              </a>
-              <div class="card__content">
-                <a class="card__title-link" href="#">Зайчик-попрыгайчик</a>
-                <p class="card__description">Рост 30 см, вес 200 г</p>
-                <div>
-                  <span class="card__price">1 200 руб.</span>
-                  <a class="card__button" href="#">
-                    <span class="visually-hidden">Добавить в корзину.</span>
-                  </a>
+          <div class="catalog__title-wrapper">
+            <h1 class="catalog__title">Каталог товаров</h1>
+          </div>
+          <div class="container">
+            <ul class="catalog__list">
+              <li class="catalog__item card">
+                <a class="card__image-link" href="#">
+                  <img class="card__image" src="img/catalog/catalog-bunny-mobile.jpg" width="260" height="195" alt="Вязаная игрушка в виде зайца.">
+                </a>
+                <div class="card__content">
+                  <a class="card__title-link" href="#">Зайчик-попрыгайчик</a>
+                  <p class="card__description">Рост 30 см, вес 200 г</p>
+                  <div class="card__order-wrapper">
+                    <span class="card__price">1 200 руб.</span>
+                    <button class="card__button modal-button">
+                      <svg aria-hidden="true" focusable="false" width="21" height="18" viewBox="0 0 21 18" fill="$color-default-black" opacity="0.2" xmlns="http://www.w3.org/2000/svg">
+                        <use xlink:href="img/sprite/sprite.svg#cart"></use>
+                      </svg>
+                      <span class="visually-hidden">Добавить в корзину.</span>
+                    </button>
+                  </div>
                 </div>
-              </div>
-            </li>
-            <li class="catalog__item card">
-              <a class="card__image-link" href="#">
-                <img class="card__image" src="img/catalog/catalog-basket-mobile.jpg" width="260" height="195" alt="Вязаная корзинка.">
-              </a>
-              <div class="card__content">
-                <a class="card__title-link" href="#">Корзинка для белья</a>
-                <p class="card__description">Диаметр 15 см, высота 10 см</p>
-                <div>
-                  <span class="card__price">690 руб.</span>
-                  <a class="card__button" href="#">
-                    <span class="visually-hidden">Добавить в корзину.</span>
-                  </a>
+              </li>
+              <li class="catalog__item card">
+                <a class="card__image-link" href="#">
+                  <img class="card__image" src="img/catalog/catalog-basket-mobile.jpg" width="260" height="195" alt="Вязаная корзинка.">
+                </a>
+                <div class="card__content">
+                  <a class="card__title-link" href="#">Корзинка для белья</a>
+                  <p class="card__description">Диаметр 15 см, высота 10 см</p>
+                  <div class="card__order-wrapper">
+                    <span class="card__price">690 руб.</span>
+                    <button class="card__button modal-button">
+                      <svg aria-hidden="true" focusable="false" width="21" height="18" viewBox="0 0 21 18" fill="$color-default-black" opacity="0.2" xmlns="http://www.w3.org/2000/svg">
+                        <use xlink:href="img/sprite/sprite.svg#cart"></use>
+                      </svg>
+                      <span class="visually-hidden">Добавить в корзину.</span>
+                    </button>
+                  </div>
                 </div>
-              </div>
-            </li>
-            <li class="catalog__item card">
-              <a class="card__image-link" href="#">
-                <img class="card__image" src="img/catalog/catalog-big-basket-mobile.jpg" width="260" height="195" alt="Вязаная корзинка, полная игрушек.">
-              </a>
-              <div class="card__content">
-                <a class="card__title-link" href="#">Большая корзинка для игрушек</a>
-                <p class="card__description">Диаметр 30 см, высота 30 см</p>
-                <div>
-                  <span class="card__price">1 500 руб.</span>
-                  <a class="card__button" href="#">
-                    <span class="visually-hidden">Добавить в корзину.</span>
-                  </a>
+              </li>
+              <li class="catalog__item card">
+                <a class="card__image-link" href="#">
+                  <img class="card__image" src="img/catalog/catalog-big-basket-mobile.jpg" width="260" height="195" alt="Вязаная корзинка, полная игрушек.">
+                </a>
+                <div class="card__content">
+                  <a class="card__title-link" href="#">Большая корзинка для игрушек</a>
+                  <p class="card__description">Диаметр 30 см, высота 30 см</p>
+                  <div class="card__order-wrapper">
+                    <span class="card__price">1 500 руб.</span>
+                    <button class="card__button modal-button">
+                      <svg aria-hidden="true" focusable="false" width="21" height="18" viewBox="0 0 21 18" fill="$color-default-black" opacity="0.2" xmlns="http://www.w3.org/2000/svg">
+                        <use xlink:href="img/sprite/sprite.svg#cart"></use>
+                      </svg>
+                      <span class="visually-hidden">Добавить в корзину.</span>
+                    </button>
+                  </div>
                 </div>
-              </div>
-            </li>
-          </ul>
+              </li>
+            </ul>
+          </div>
         </section>
 
         <section class="video">
-          <h2 class="video__title">Процесс производства</h2>
-          <div class="video__container">
-            <img class="video__image" src="img/catalog/video-mobile.jpg" width="260" height="150" alt="Вязаные корзинки.">
-            <button class="video__button" type="button">
-              <span class="visually-hidden">Запустить видео.</span>
-            </button>
+          <div class="container">
+            <div class="video__wrapper">
+              <h2 class="video__title">Процесс производства</h2>
+            <div class="video__image-wrapper">
+              <img class="video__image" src="img/catalog/video-mobile.jpg" width="260" height="150" alt="Вязаные корзинки.">
+              <button class="video__play-button" type="button">
+                <span class="visually-hidden">Запустить видео.</span>
+              </button>
+            </div>
+            <p class="video__description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются&nbsp;наши товары.</p>
+            <a class="video__button-link button" href="#">Сделать заказ</a>
+            </div>
           </div>
-          <p class="video__description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
-          <a class="video__button-link" href="#">Сделать заказ</a>
         </section>
       </main>
 
       <footer class="footer">
         <div class="container">
-          <a class="footer__logo-link" href="index.html">
-            <img class="footer__logo" src="#" width="102" height="34" alt="Логотип сайта Mishka.">
-          </a>
-          <div class="footer__social">
-            <ul class="footer__social-list">
-              <li class="footer__social-item">
-                <a class="footer__social-link footer__social-link--vkontakte" target="_blank" href="https://vk.com/htmlacademy">
-                  <!-- <svg class="footer__social-icon" width="28" height="22">
-                    <use xlink:href="img/sprite/sprite.svg#vk"></use>
-                  </svg> -->
-                  <span class="visually-hidden">Мы в Вконтакте.</span>
-                </a>
-              </li>
-              <li class="footer__social-item">
-                <a class="footer__social-link footer__social-link--youtube" target="_blank" href="https://www.youtube.com/user/htmlacademyru">
-                  <!-- <svg class="footer__social-icon" width="28" height="22">
-                    <use xlink:href="img/sprite/sprite.svg#youtube"></use>
-                  </svg> -->
-                  <span class="visually-hidden">Мы в Ютубе.</span>
-                </a>
-              </li>
-              <li class="footer__social-item">
-                <a class="footer__social-link footer__social-link--telegram" target="_blank" href="https://t.me/htmlacademy">
-                  <!-- <svg class="footer__social-icon" width="28" height="22">
-                    <use xlink:href="img/sprite/sprite.svg#telegram"></use>
-                  </svg> -->
-                  <span class="visually-hidden">Мы в Telegram.</span>
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div class="footer__copyright">
-            <a class="footer__copyright-link" target="_blank" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Сайт HTML Academy.">Разработано
-              <!-- <svg class="footer__copyright-icon" width="27" height="35">
-                <use xlink:href="img/sprite/sprite.svg#copyright"></use>
-              </svg> -->
+          <div class="footer__wrapper">
+            <a class="footer__logo-link" href="index.html">
+              <img class="footer__logo" src="#" width="102" height="34" alt="Логотип сайта Mishka.">
             </a>
+            <div class="footer__social">
+              <ul class="footer__social-list">
+                <li class="footer__social-item">
+                  <a class="footer__social-link footer__social-link--vkontakte" target="_blank" href="https://vk.com/htmlacademy">
+                    <svg class="footer__social-icon" width="28" height="22">
+                      <use xlink:href="img/sprite/sprite.svg#vk"></use>
+                    </svg>
+                    <span class="visually-hidden">Мы в Вконтакте.</span>
+                  </a>
+                </li>
+                <li class="footer__social-item">
+                  <a class="footer__social-link footer__social-link--youtube" target="_blank" href="https://www.youtube.com/user/htmlacademyru">
+                    <svg class="footer__social-icon" width="28" height="22">
+                      <use xlink:href="img/sprite/sprite.svg#youtube"></use>
+                    </svg>
+                    <span class="visually-hidden">Мы в Ютубе.</span>
+                  </a>
+                </li>
+                <li class="footer__social-item">
+                  <a class="footer__social-link footer__social-link--telegram" target="_blank" href="https://t.me/htmlacademy">
+                    <svg class="footer__social-icon" width="28" height="22">
+                      <use xlink:href="img/sprite/sprite.svg#telegram"></use>
+                    </svg>
+                    <span class="visually-hidden">Мы в Telegram.</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer__copyright">
+              <a class="footer__copyright-link" target="_blank" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Сайт HTML Academy.">Разработано
+                <svg class="footer__copyright-icon" width="27" height="35">
+                  <use xlink:href="img/sprite/sprite.svg#copyright"></use>
+                </svg>
+              </a>
+            </div>
           </div>
         </div>
       </footer>
     </div>
 
-    <div class="modal-container">
-      <div class="modal">
-        <h2 class="modal__title">Добавить в корзину</h2>
+    <div class="modal">
+      <div class="modal__content">
+        <h2 class="modal__title">Добавить в&nbsp;корзину</h2>
         <p class="modal__text">Выберите размер:</p>
         <form class="modal__form" action="https://echo.htmlacademy.ru">
           <ul class="modal__form-list">
@@ -184,6 +206,6 @@
         </form>
       </div>
     </div>
-
+    <script src="js/script.js"></script>
   </body>
 </html>

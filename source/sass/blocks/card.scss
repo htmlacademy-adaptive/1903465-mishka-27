@@ -1,0 +1,42 @@
+.card__content {
+  padding: 21px 27px 21px 28px;
+  border: 1px solid $color-whisper;
+}
+
+.card__title-link {
+  display: block;
+  margin: 0 0 5px 0;
+
+  font-size: 17px;
+  line-height: 24px;
+  font-weight: 700;
+
+  text-decoration: none;
+  color: $color-black;
+}
+
+.card__description {
+  margin: 0 0 18px 0;
+
+  font-size: 13px;
+  line-height: 30px;
+  font-weight: 400;
+
+  color: $color-charcoal;
+}
+
+.card__order-wrapper {
+  display: flex;
+  padding: 23px 0 0 0;
+  border-top: 1px solid $color-whisper;
+}
+
+.card__price {
+  font-size: 15px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+.card__button {
+  margin-left: auto;
+}
