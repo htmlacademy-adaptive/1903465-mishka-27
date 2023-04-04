@@ -1,5 +1,10 @@
 .advantages__wrapper {
   padding: 38px 0 38px 0;
+
+  @media (min-width: $vp-768) {
+    margin-bottom: 82px;
+    padding: 81px 0 38px 0;
+  }
 }
 
 .advantages__title {
@@ -7,6 +12,12 @@
   font-size: 25px;
   line-height: 30px;
   font-weight: 700;
+
+  @media (min-width: $vp-768) {
+    margin: 0 0 50px 0;
+    font-size: 43px;
+    line-height: 35px;
+  }
 }
 
 .advantages__list {
@@ -14,11 +25,114 @@
   display: grid;
   grid-template-columns: 1fr;
   row-gap: 30px;
+
+  @media (min-width: $vp-768) {
+    grid-template-columns: 1fr 1fr;
+    row-gap: 57px;
+  }
+}
+
+.advantages__item {
+  @media (min-width: $vp-768) {
+    &--ecology {
+      order: 1;
+    }
+
+    &--style {
+      order: 3;
+    }
+
+    &--likes {
+      order: 5;
+    }
+
+    &--handmade {
+      order: 2;
+    }
+
+    &--support {
+      order: 4;
+    }
+
+    &--present {
+      order: 6;
+    }
+  }
 }
 
 .advantages__description {
+  position: relative;
+
   margin: 0;
   padding: 53px 0 0 0;
   line-height: 20px;
   font-weight: 700;
+
+  @media (min-width: $vp-768) {
+    padding-top: 56px;
+    font-size: 20px;
+    line-height: 22px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 8px;
+
+    width: 33px;
+    height: 38px;
+
+    background-image: url("../img/svg/icon-flower.svg");
+    background-repeat: no-repeat;
+  }
+
+  &--style::before {
+    left: 0;
+
+    width: 47px;
+    height: 27px;
+
+    background-image: url("../img/svg/icon-money.svg");
+  }
+
+  &--like::before {
+    top: 5px;
+    left: 7px;
+
+    width: 34px;
+    height: 27px;
+
+    background-image: url("../img/svg/icon-heart.svg");
+  }
+
+  &--handmade::before {
+    top: 2px;
+    left: 3px;
+
+    width: 35px;
+    height: 34px;
+
+    background-image: url("../img/svg/icon-yarn.svg");
+  }
+
+  &--support::before {
+    top: 2px;
+    left: 3px;
+
+    width: 55px;
+    height: 23px;
+
+    background-image: url("../img/svg/icon-rocket.svg");
+  }
+
+  &--present::before {
+    top: 2px;
+    left: 3px;
+
+    width: 33px;
+    height: 32px;
+
+    background-image: url("../img/svg/icon-box.svg");
+  }
 }

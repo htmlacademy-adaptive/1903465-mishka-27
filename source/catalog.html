@@ -8,49 +8,67 @@
   </head>
   <body>
     <div class="wrapper">
-      <div class="container">
-        <header class="header">
-          <a class="header__logo" href="index.html" aria-label="Переход на главную страницу интернет-магазина.">
-            <img class="header__logo-image" src="img/svg/logo-mobile.svg" width="86" height="35" alt="Логотип сайта.">
-          </a>
-          <button class="header__nav-toggle" type="button" aria-label="Открыть/закрыть меню.">
-            <span class="header__toggle-line"></span>
-          </button>
+      <header class="header header--inner">
+        <div class="container">
           <nav class="header__nav">
-            <ul class="header__nav-list header__nav-list--site">
-              <li class="header__nav-item">
-                <span class="header__nav-link header__nav-link--current">Каталог товаров</span>
-              </li>
-              <li class="header__nav-item">
-                <a class="header__nav-link" href="form.html">Вязание на заказ</a>
-              </li>
-            </ul>
-            <ul class="header__nav-list header__nav-list--user">
-              <li class="header__nav-item header__nav-item--user">
-                <a class="header__nav-link header__nav-link--user" href="#" aria-label="Поиск по сайту.">Поиск по сайту</a>
-              </li>
-              <li class="header__nav-item header__nav-item--user">
-                <a class="header__nav-link header__nav-link--user" href="#">Корзина: пока пуста</a>
-              </li>
-            </ul>
-            <ul class="header__nav-list header__nav-list--sale">
-              <li class="header__nav-item">
-                <a class="header__nav-link" href="#">Новые поступления</a>
-              </li>
-              <li class="header__nav-item">
-                <a class="header__nav-link" href="#">Распродажа</a>
-              </li>
-            </ul>
-            <span class="header__text">Бесплатная доставка по России</span>
+            <a class="header__logo" href="index.html" aria-label="Переход на главную страницу.">
+              <picture>
+                <source media="(min-width: 1150px)" srcset="img/svg/logo-desktop.svg" width="149" height="72">
+                <source media="(min-width: 768px)" srcset="img/svg/logo-tablet.svg" width="113" height="46">
+                <img class="header__logo-image" src="img/svg/logo-mobile.svg" width="86" height="35" alt="Логотип сайта.">
+              </picture>
+            </a>
+            <button class="header__nav-toggle" type="button" aria-label="Открыть/закрыть меню.">
+              <span class="header__toggle-line"></span>
+            </button>
+            <div class="header__nav-wrapper">
+              <ul class="header__site-list">
+                <li class="header__site-item">
+                  <span class="header__site-link header__site-link--current">Каталог товаров</span>
+                </li>
+                <li class="header__site-item">
+                  <a class="header__site-link" href="form.html">Вязание на заказ</a>
+                </li>
+              </ul>
+              <ul class="header__user-list">
+                <li class="header__user-item">
+                  <a class="header__user-link" href="#" aria-label="Поиск по сайту.">
+                    <svg class="header__user-icon" width="18" height="18">
+                      <use xlink:href="img/sprite/sprite.svg#search"></use>
+                    </svg>
+                    <span class="header__nav-text header__nav-text--search">Поиск по сайту</span>
+                  </a>
+                </li>
+                <li class="header__user-item">
+                  <a class="header__user-link" href="#">
+                    <svg class="header__user-icon header__user-icon--basket" width="21" height="18">
+                      <use xlink:href="img/sprite/sprite.svg#basket"></use>
+                    </svg>
+                    <span class="header__nav-text">Корзина: пока пуста</span>
+                  </a>
+                </li>
+              </ul>
+              <ul class="header__news-list header__news-list--inner">
+                <li class="header__news-item">
+                  <a class="header__news-link" href="#">Новые поступления</a>
+                </li>
+                <li class="header__news-item">
+                  <a class="header__news-link" href="#">Распродажа</a>
+                </li>
+              </ul>
+              <p class="header__delivery">Бесплатная доставка по России</p>
+            </div>
           </nav>
-        </header>
-      </div>
+        </div>
+      </header>
 
       <main>
-        <section class="catalog">
-          <div class="catalog__title-wrapper">
-            <h1 class="catalog__title">Каталог товаров</h1>
+        <section class="intro">
+          <div class="container">
+            <h1 class="intro__title">Каталог товаров</h1>
           </div>
+        </section>
+        <section class="catalog">
           <div class="container">
             <ul class="catalog__list">
               <li class="catalog__item card">

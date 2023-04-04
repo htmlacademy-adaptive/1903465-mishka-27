@@ -1,0 +1,22 @@
+.intro {
+  margin: 0 0 30px 0;
+  padding: 74px 0 74px 0;
+  background-color: $color-white-smoke;
+
+  @media (min-width: $vp-768) {
+    margin: 0 0 67px 0;
+  }
+}
+
+.intro__title {
+  margin: 0;
+  font-size: 27px;
+  line-height: 30px;
+  font-weight: 700;
+  text-align: center;
+
+  @media (min-width: $vp-768) {
+    font-size: 43px;
+    line-height: 50px;
+  }
+}
