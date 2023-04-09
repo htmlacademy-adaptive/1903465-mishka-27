@@ -2,8 +2,11 @@
   padding: 38px 0 38px 0;
 
   @media (min-width: $vp-768) {
-    margin-bottom: 82px;
-    padding: 81px 0 38px 0;
+    padding: 81px 0 77px 0;
+  }
+
+  @media (min-width: $vp-1150) {
+    padding: 113px 0 85px 0;
   }
 }
 
@@ -18,6 +21,14 @@
     font-size: 43px;
     line-height: 35px;
   }
+
+  @media (min-width: $vp-1150) {
+    max-width: 699px;
+    margin: 0 auto 39px auto;
+
+    font-size: 53px;
+    line-height: 57px;
+  }
 }
 
 .advantages__list {
@@ -29,6 +40,9 @@
   @media (min-width: $vp-768) {
     grid-template-columns: 1fr 1fr;
     row-gap: 57px;
+
+    max-width: 699px;
+    margin: 0 auto;
   }
 }
 
@@ -118,7 +132,7 @@
 
   &--support::before {
     top: 2px;
-    left: 3px;
+    left: -6px;
 
     width: 55px;
     height: 23px;

@@ -38,5 +38,44 @@
 }
 
 .card__button {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: rgba($color-black, 0.2);
+
+  background-color: transparent;
+  border: none;
+
   margin-left: auto;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 40px;
+    height: 40px;
+
+    background-color: transparent;
+    transform: translate(-50%, -50%);
+  }
+
+  &:hover {
+    color: $color-downy;
+  }
+
+  &:focus,
+  &:active {
+    color: rgba($color-downy, 0.3);
+  }
+
+  &:disabled {
+    opacity: 0.1;
+
+    pointer-events: none;
+  }
 }

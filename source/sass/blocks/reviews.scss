@@ -1,30 +1,40 @@
 .reviews {
   position: relative;
-
-  @media (min-width: $vp-768) {
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      right: calc(50% + 34px);
-      z-index: -1;
-
-      width: calc(50% - 18px);
-      height: calc(100% - 85px);
-
-      background-color: $color-white-smoke;
-      background-image: url("../../img/review-tablet.jpg");
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
-  }
 }
 
 .reviews__wrapper {
+  position: relative;
+
   padding: 20px 0 45px 0;
 
+  &::before {
+    @media (min-width: $vp-768) {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+
+      width: 350px;
+      height: 100%;
+
+      background-image: url("../../img/review-tablet.jpg");
+      background-repeat: no-repeat;
+    }
+
+    @media (min-width: $vp-1150) {
+      // left: 50px;
+    }
+  }
+
   @media (min-width: $vp-768) {
-    padding: 78px 0 131px 0;
+    position: relative;
+    padding: 84px 0 131px 0;
+  }
+
+  @media (min-width: $vp-1150) {
+    margin: 0 0 71px 0;
+    padding: 78px 0 183px 174px;
   }
 }
 
@@ -38,6 +48,12 @@
     margin: 0 0 39px;
     font-size: 43px;
     line-height: 50px;
+  }
+
+  @media (min-width: $vp-1150) {
+    margin: 0 0 36px;
+    font-size: 53px;
+    line-height: 57px;
   }
 }
 
@@ -54,6 +70,10 @@
   @media (min-width: $vp-768) {
     margin: 0 0 61px;
     font-size: 17px;
+  }
+
+  @media (min-width: $vp-1150) {
+    margin: 0 0 46px;
   }
 }
 
@@ -75,6 +95,10 @@
     margin: 0;
     font-size: 18px;
   }
+
+  @media (min-width: $vp-1150) {
+    font-size: 17px;
+  }
 }
 
 .reviews__author-email {
@@ -89,6 +113,17 @@
   grid-template-columns: 1fr 1fr;
 
   margin: 0 0 38px 0;
+
+  @media (min-width: $vp-768) {
+    position: absolute;
+    right: 0;
+    bottom: 131px;
+    margin-bottom: 0;
+
+    @media (min-width: $vp-1150) {
+      bottom: 185px;
+    }
+  }
 }
 
 .reviews__pagination-button {
@@ -124,6 +159,11 @@
   &:active {
     opacity: 0.3;
   }
+
+  @media (min-width: $vp-768) {
+    padding: 0 49px 0 38px;
+    border: none;
+  }
 }
 
 .reviews__button {
@@ -131,4 +171,14 @@
   padding: 14px;
   outline: unset;
   border: 2px solid $color-charcoal;
+
+  @media (min-width: $vp-768) {
+    position: absolute;
+    top: 78px;
+    right: 0;
+
+    width: 175px;
+
+    font-size: 17px;
+  }
 }

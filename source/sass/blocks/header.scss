@@ -318,22 +318,22 @@
   }
 
   @media (min-width: $vp-1150) {
-    max-width: unset;
+    // max-width: unset;
   }
 
-  &::before {
-    @media (min-width: $vp-768) {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: -100vw;
+  // &::before {
+  //   @media (min-width: $vp-768) {
+  //     content: "";
+  //     position: absolute;
+  //     bottom: 0;
+  //     left: -100vw;
 
-      width: 200vw;
-      height: 1px;
+  //     width: 200vw;
+  //     height: 1px;
 
-      background-color: $color-whisper;
-    }
-  }
+  //     background-color: $color-whisper;
+  //   }
+  // }
 
   &::after {
     @media (min-width: $vp-768) {
@@ -390,7 +390,7 @@
     left: 0;
   }
 
-  &--basket {
+  &--cart {
     @media (min-width: $vp-768) {
       margin-right: 26px;
     }

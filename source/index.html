@@ -32,17 +32,17 @@
                   </li>
                 </ul>
                 <ul class="header__user-list">
-                  <li class="header__user-item header__user-item--search">
-                    <a class="header__user-link" href="#" aria-label="Поиск по сайту.">
+                  <li class="header__user-item">
+                    <a class="header__user-link header__user-link--search" href="#" aria-label="Поиск по сайту.">
                       <svg class="header__user-icon" width="18" height="18">
                         <use xlink:href="img/sprite/sprite.svg#search"></use>
                       </svg>
                       <span class="header__nav-text header__nav-text--search">Поиск по сайту</span>
                     </a>
                   </li>
-                  <li class="header__user-item header__user-item--cart">
-                    <a class="header__user-link" href="#">
-                      <svg class="header__user-icon header__user-icon--basket" width="21" height="18">
+                  <li class="header__user-item">
+                    <a class="header__user-link header__user-link--cart" href="#">
+                      <svg class="header__user-icon header__user-icon--cart" width="21" height="18">
                         <use xlink:href="img/sprite/sprite.svg#basket"></use>
                       </svg>
                       <span class="header__nav-text">Корзина: пока пуста</span>
@@ -193,7 +193,7 @@
           </div>
           <div class="container">
             <div class="contacts__button-wrapper">
-              <a class="contacts__button button" href="#">Напишите нам</a>
+              <a class="contacts__button-link button" href="#">Напишите нам</a>
             </div>
           </div>
         </section>
@@ -203,7 +203,9 @@
         <div class="container">
           <div class="footer__wrapper">
             <a class="footer__logo-link" href="index.html">
-              <img class="footer__logo" src="#" width="102" height="34" alt="Логотип сайта Mishka.">
+              <svg class="footer__logo" width="101" height="34" role="img" focusable="false" aria-label="Перейти на главную страницу.">
+                <use href="img/sprite/sprite.svg#logo-footer">
+              </svg>
             </a>
             <div class="footer__social">
               <ul class="footer__social-list">

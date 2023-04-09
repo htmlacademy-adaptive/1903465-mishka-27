@@ -11,6 +11,10 @@
     background-image: url("../img/hero-desktop.jpg");
     background-position: 50% -66px;
   }
+
+  @media (min-width: $vp-1150) {
+    margin: 0 0 71px 0;
+  }
 }
 
 .hero__title {
