@@ -8,38 +8,117 @@
   justify-content: center;
   align-items: center;
 
-  background-color: rgba(255, 255, 255, 0.9);
   display: none;
-  z-index: 1;
-}
 
-.modal.is-open {
-  display: flex;
+  background-color: rgba($color-white, 0.9);
+
+  z-index: 1;
+
+  &.is-open {
+    display: flex;
+  }
 }
 
 .modal__content {
   width: 100%;
-  min-width: 320px;
+  max-width: 410px;
   min-height: 336px;
+  margin: auto;
   padding: 28px 30px 46px 30px;
+
   background-color: $color-white;
   border: 1px solid $color-silver;
   box-shadow: 0 5px 10px rgba(0, 1, 1, 0.25);
+
+  @media (min-width: $vp-768) {
+    max-width: 566px;
+    padding: 37px 105px 46px 105px;
+  }
 }
 
 .modal__title {
   margin: 0 0 14px 0;
+
   font-size: 25px;
   line-height: 30px;
   font-weight: 700;
+
   text-align: center;
+  text-transform: uppercase;
+
+  @media (min-width: $vp-768) {
+    margin-bottom: 11px;
+
+    font-size: 30px;
+    line-height: 57px;
+  }
 }
 
-.modal__text {
-  margin: 0 0 22px 0;
+.modal__fieldset {
+  @include fieldset-reset;
+}
+
+.modal__legend {
+  @include legend-reset;
+
+  margin: 0 auto 22px auto;
+
   font-size: 15px;
   line-height: 30px;
   font-weight: 400;
   color: $color-charcoal;
+  text-align: center;
+
+  @media (min-width: $vp-768) {
+    margin-bottom: 20px;
+
+    font-size: 17px;
+  }
+}
+
+.modal__form-list {
+  @include list-reset;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 7px;
+  row-gap: 14px;
+
+  margin: 0 0 31px 0;
+}
+
+.modal__form-label {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.modal__radio {
+  display: block;
+  padding: 16px 10px 16px 10px;
+
+  font-size: 17px;
+  line-height: 16px;
+  font-weight: 700;
+
+  text-align: center;
+  text-transform: uppercase;
+
+  border: 2px solid rgba($color-charcoal, 0.1);
+}
+
+.modal__form-input:checked + .modal__radio,
+.modal__form-label:active .modal__radio,
+.modal__form-label:focus-within .modal__radio {
+  border: 2px solid $color-downy-mod;
+}
+
+.modal__button {
+  display: block;
+  width: 100%;
+  max-width: 350px;
+  margin: 0 auto;
+  padding: 18px;
+
   text-align: center;
 }

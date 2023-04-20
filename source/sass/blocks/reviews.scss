@@ -1,13 +1,7 @@
 .reviews {
   position: relative;
-}
 
-.reviews__wrapper {
-  position: relative;
-
-  padding: 20px 0 45px 0;
-
-  &::before {
+  &::after {
     @media (min-width: $vp-768) {
       content: "";
       position: absolute;
@@ -16,14 +10,47 @@
       z-index: -1;
 
       width: 350px;
-      height: 100%;
+      height: calc(100% - 85px);
 
-      background-image: url("../../img/review-tablet.jpg");
+      background-color: $color-white-smoke;
+      background-image: url("../img/review-tablet.jpg");
       background-repeat: no-repeat;
+      background-size: cover;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../../img/review-tablet@2x.jpg");
+      }
     }
 
     @media (min-width: $vp-1150) {
-      // left: 50px;
+      display: none;
+    }
+  }
+}
+
+.reviews__wrapper {
+  position: relative;
+
+  padding: 20px 0 49px 0;
+
+  &::before {
+    @media (min-width: $vp-1150) {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+
+      width: 350px;
+      height: calc(100% - 86px);
+
+      background-image: url("../img/review-tablet.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../../img/review-tablet@2x.jpg");
+      }
     }
   }
 
@@ -112,7 +139,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
 
-  margin: 0 0 38px 0;
+  margin: 0 0 36px 0;
 
   @media (min-width: $vp-768) {
     position: absolute;
@@ -131,7 +158,7 @@
   width: 100%;
   min-height: 52px;
 
-  background-color: $color-white;
+  background-color: rgba($color-black, 0);
   border: 1px solid $color-whisper;
 
   &::before {
@@ -148,7 +175,7 @@
   }
 
   &--next::before {
-    border-left-color: transparent;
+    border-left-color: rgba($color-black, 0);
     transform: translateX(-50%) translateY(-50%) rotate(180deg);
   }
 

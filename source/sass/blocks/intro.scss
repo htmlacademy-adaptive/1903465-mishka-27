@@ -1,10 +1,25 @@
 .intro {
-  margin: 0 0 30px 0;
-  padding: 74px 0 74px 0;
+  padding: 71px 0 74px 0;
   background-color: $color-white-smoke;
 
   @media (min-width: $vp-768) {
-    margin: 0 0 67px 0;
+    padding: 36px 0 74px 0;
+  }
+
+  @media (min-width: $vp-1150) {
+    padding: 36px 0 96px 0;
+
+    &::before {
+      @media (min-width: $vp-1150) {
+        bottom: -17px;
+        left: -100vw;
+
+        width: 200vw;
+        height: 34px;
+
+        background-size: 1150px 36px;
+      }
+    }
   }
 }
 
@@ -18,5 +33,13 @@
   @media (min-width: $vp-768) {
     font-size: 43px;
     line-height: 50px;
+  }
+
+  @media (min-width: $vp-1150) {
+    max-width: 1050px;
+    margin: 0 auto;
+
+    font-size: 53px;
+    line-height: 57px;
   }
 }
