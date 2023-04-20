@@ -1,0 +1,211 @@
+.reviews {
+  position: relative;
+
+  &::after {
+    @media (min-width: $vp-768) {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+
+      width: 350px;
+      height: calc(100% - 85px);
+
+      background-color: $color-white-smoke;
+      background-image: url("../img/review-tablet.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../../img/review-tablet@2x.jpg");
+      }
+    }
+
+    @media (min-width: $vp-1150) {
+      display: none;
+    }
+  }
+}
+
+.reviews__wrapper {
+  position: relative;
+
+  padding: 20px 0 49px 0;
+
+  &::before {
+    @media (min-width: $vp-1150) {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+
+      width: 350px;
+      height: calc(100% - 86px);
+
+      background-image: url("../img/review-tablet.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../../img/review-tablet@2x.jpg");
+      }
+    }
+  }
+
+  @media (min-width: $vp-768) {
+    position: relative;
+    padding: 84px 0 131px 0;
+  }
+
+  @media (min-width: $vp-1150) {
+    margin: 0 0 71px 0;
+    padding: 78px 0 183px 174px;
+  }
+}
+
+.reviews__title {
+  margin: 0 0 14px 0;
+  font-size: 25px;
+  line-height: 30px;
+  font-weight: 700;
+
+  @media (min-width: $vp-768) {
+    margin: 0 0 39px;
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  @media (min-width: $vp-1150) {
+    margin: 0 0 36px;
+    font-size: 53px;
+    line-height: 57px;
+  }
+}
+
+.reviews__content {
+  margin: 0;
+}
+
+.reviews__description {
+  margin: 0 0 33px 0;
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: 400;
+
+  @media (min-width: $vp-768) {
+    margin: 0 0 61px;
+    font-size: 17px;
+  }
+
+  @media (min-width: $vp-1150) {
+    margin: 0 0 46px;
+  }
+}
+
+.reviews__author-info {
+  margin: 0 0 30px 0;
+
+  @media (min-width: $vp-768) {
+    margin: 0;
+  }
+}
+
+.reviews__author-name {
+  margin: 0 0 5px 0;
+  font-size: 17px;
+  line-height: 24px;
+  font-weight: 700;
+
+  @media (min-width: $vp-768) {
+    margin: 0;
+    font-size: 18px;
+  }
+
+  @media (min-width: $vp-1150) {
+    font-size: 17px;
+  }
+}
+
+.reviews__author-email {
+  display: block;
+  font-size: 17px;
+  line-height: 30px;
+  color: $color-charcoal;
+}
+
+.reviews__pagination {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  margin: 0 0 36px 0;
+
+  @media (min-width: $vp-768) {
+    position: absolute;
+    right: 0;
+    bottom: 131px;
+    margin-bottom: 0;
+
+    @media (min-width: $vp-1150) {
+      bottom: 185px;
+    }
+  }
+}
+
+.reviews__pagination-button {
+  position: relative;
+  width: 100%;
+  min-height: 52px;
+
+  background-color: rgba($color-black, 0);
+  border: 1px solid $color-whisper;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 50px;
+    height: 26px;
+
+    background-image: url("../img/svg/arrow-left.svg");
+    transform: translateX(-50%) translateY(-50%);
+  }
+
+  &--next::before {
+    border-left-color: rgba($color-black, 0);
+    transform: translateX(-50%) translateY(-50%) rotate(180deg);
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: $vp-768) {
+    padding: 0 49px 0 38px;
+    border: none;
+  }
+}
+
+.reviews__button {
+  min-height: 52px;
+  padding: 14px;
+  outline: unset;
+  border: 2px solid $color-charcoal;
+
+  @media (min-width: $vp-768) {
+    position: absolute;
+    top: 78px;
+    right: 0;
+
+    width: 175px;
+
+    font-size: 17px;
+  }
+}

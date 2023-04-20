@@ -1,0 +1,110 @@
+.footer {
+  min-height: 160px;
+  margin-top: auto;
+
+  background-color: $color-white-smoke;
+}
+
+.footer__wrapper {
+  padding: 28px 0 32px 0;
+
+  @media (min-width: $vp-768) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    padding: 54px 0 54px 0;
+  }
+
+  @media (min-width: $vp-1150) {
+    gap: 201px;
+  }
+}
+
+.footer__logo-link {
+  display: none;
+  width: 100%;
+  color: $color-black;
+
+  &:hover {
+    color: $color-puerto-rico-mod;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: $vp-768) {
+    display: flex;
+  }
+}
+
+.footer__social {
+  width: 100%;
+  margin: 0 auto 20px;
+
+  @media (min-width: $vp-768) {
+    margin-bottom: 0;
+  }
+}
+
+.footer__social-list {
+  @include list-reset;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 28px);
+  gap: 28px;
+  justify-content: center;
+  padding: 0 0 28px 0;
+  border-bottom: 1px solid $color-whisper-mod;
+
+  @media (min-width: $vp-768) {
+    justify-content: flex-start;
+    padding: 0;
+    transform: translate(-3px, 4px);
+  }
+}
+
+.footer__social-link {
+  &:hover svg {
+    stroke: $color-puerto-rico-mod;
+  }
+
+  &:active svg {
+    opacity: 0.3;
+  }
+}
+
+.footer__social-icon {
+  color: $color-aubergine;
+}
+
+.footer__copyright {
+  transform: translate(-1px, 6px);
+}
+
+.footer__copyright-link {
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: 27px;
+  width: 70%;
+  margin: 0 auto;
+
+  font-size: 19px;
+  line-height: 18px;
+  font-weight: 700;
+
+  color: $color-black;
+
+  &:hover svg {
+    color: $color-puerto-rico-mod;
+  }
+
+  &:active svg {
+    opacity: 0.3;
+  }
+}
+
+.footer__copyright-icon {
+  color: $color-downy;
+  transform: translateY(-7px);
+}
