@@ -50,6 +50,19 @@
 
 .catalog__image-link {
   display: block;
+
+  width: 260px;
+  height: 195px;
+
+  @media (min-width: $vp-768) {
+    width: 334px;
+    height: 334px;
+  }
+
+  @media (min-width: $vp-1150) {
+    width: 316px;
+    height: 462px;
+  }
 }
 
 .catalog__image {
@@ -60,7 +73,7 @@
   object-fit: cover;
 
   @media (min-width: $vp-1150) {
-    height: unset;
+    height: 462px;
   }
 }
 

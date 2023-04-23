@@ -8,7 +8,7 @@
   }
 
   @media (min-width: $vp-1150) {
-    padding: 61px 0 95px 0;
+    padding: 132px 0 95px 0;
   }
 }
 
@@ -28,6 +28,8 @@
   @media (min-width: $vp-1150) {
     grid-template-columns: 164px 1fr;
     gap: 11px;
+
+    margin: 0 0 37px;
   }
 }
 
@@ -52,7 +54,7 @@
   @media (min-width: $vp-1150) {
     justify-self: center;
 
-    padding-top: 10px;
+    padding-top: 8px;
   }
 }
 
@@ -86,6 +88,8 @@
     flex-direction: column;
     min-height: 416px;
     padding-right: calc(50% + 42px);
+
+    overflow: hidden;
   }
 
   @media (min-width: $vp-1150) {
@@ -102,13 +106,13 @@
   color: $color-charcoal;
 
   @media (min-width: $vp-768) {
-    margin: 0 0 37px 0;
+    margin: 0 0 39px 0;
     font-size: 17px;
     line-height: 30px;
   }
 
   @media (min-width: $vp-1150) {
-    margin: 0 0 48px 0;
+    margin: 0 0 51px 0;
   }
 }
 
@@ -116,25 +120,30 @@
   margin: 0 0 27px 0;
 
   @media (min-width: $vp-768) {
-    margin: 0 0 61px 0;
+    margin: 0 0 57px 0;
   }
 
   @media (min-width: $vp-1150) {
-    margin: 0 0 115px 0;
+    margin: 0 0 109px 0;
   }
 }
 
 .product__info-item {
   display: grid;
   grid-template-columns: 0.6fr 1fr;
-  padding: 10px 0 10px 0;
+  padding: 9px 0 11px 0;
+
   font-size: 15px;
   line-height: 20px;
   color: $color-charcoal;
 
+  border-bottom: 1px solid $color-whisper;
+
   @media (min-width: $vp-768) {
     grid-template-columns: 0.4fr 1fr;
     gap: 18px;
+
+    padding: 8px 0 12px 0;
   }
 }
 
@@ -151,7 +160,7 @@
 
   @media (min-width: $vp-768) {
     position: absolute;
-    top: 11px;
+    top: 12px;
     right: 0;
 
     width: 50%;
@@ -160,7 +169,7 @@
   }
 
   @media (min-width: $vp-1150) {
-    top: 0;
+    top: 71px;
 
     z-index: -1;
   }
@@ -172,6 +181,10 @@
   height: auto;
 
   object-fit: cover;
+
+  @media (min-width: $vp-1150) {
+    height: calc(100% - 167px);
+  }
 }
 
 .product__price {

@@ -10,3 +10,10 @@ document.addEventListener('keydown', (evt) => {
   }
 }
 );
+
+document.addEventListener('click', (evt) => {
+  if(!evt.target.closest('.header')) {
+    header.classList.remove('is-open');
+  }
+}
+);

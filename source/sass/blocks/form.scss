@@ -140,6 +140,25 @@
   }
 }
 
+.form__color-background {
+  position: relative;
+
+  &::before {
+    @media (min-width: $vp-768) {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100vw;
+      z-index: -1;
+
+      width: 200vw;
+      height: 100%;
+
+      background-color: $color-white-smoke;
+    }
+  }
+}
+
 .form__fieldset-group {
   @media (min-width: $vp-768) {
     position: relative;
@@ -574,6 +593,7 @@
   @media (min-width: $vp-768) {
     order: 1;
 
+    max-width: 331px;
     margin: 0;
     padding: 12px 0 0 0;
 
